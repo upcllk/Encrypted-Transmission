@@ -50,7 +50,11 @@ bool ClientOP::seckeyAgree() {
 	reqInfo.cmd = 1;
 	reqInfo.data = str.str();		// 非对称加密的公钥 
 
-	reqInfo.sign = rsa->rsaSign(str.str());		// 公钥签名
+	// 创建哈希对象 --> 公钥过长会导致验证签名失败
+	myHash sha1(T_SHA1);
+	sha1.addData(str.str());
+	reqInfo.sign = rsa->rsaSign(sha1.getResult());
+	// reqInfo.sign = rsa->rsaSign(str.str());		// 公钥签名
 
 	cout << "签名完成 .. " << endl;
 

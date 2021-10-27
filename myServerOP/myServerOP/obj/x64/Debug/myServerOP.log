@@ -11,21 +11,21 @@
   msg.pb.cc
   myHash.cpp
   myRSA.cpp
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(54,40): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(54,40): warning :    54 |  int ret = RSA_public_encrypt(data.size(), (const unsigned char*)data.data(),
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(54,40): warning :       |                               ~~~~~~~~~^~
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(72,43): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(72,43): warning :    72 |  int ret = RSA_public_decrypt(encData.size(), (const unsigned char*)encData.data(),
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(72,43): warning :       |                               ~~~~~~~~~~~~^~
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(95,14): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(95,14): warning :    95 |     data.size(), (unsigned char*)signBuf, &outLen, m_privateKey);
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(95,14): warning :       |     ~~~~~~~~~^~
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(109,74): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(109,74): warning :   109 |  int ret = RSA_verify(level, (const unsigned char*)data.data(), data.size(),
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(109,74): warning :       |                                                                 ~~~~~~~~~^~
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(110,55): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(110,55): warning :   110 |   (const unsigned char*)signData.data(), signData.size(), m_publicKey);
-D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(110,55): warning :       |                                          ~~~~~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(55,40): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(55,40): warning :    55 |  int ret = RSA_public_encrypt(data.size(), (const unsigned char*)data.data(),
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(55,40): warning :       |                               ~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(103,12): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(103,12): warning :   103 |   data.size(), (unsigned char*)signBuf, &outLen, m_privateKey);
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(103,12): warning :       |   ~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(126,74): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(126,74): warning :   126 |  int ret = RSA_verify(level, (const unsigned char*)data.data(), data.size(),
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(126,74): warning :       |                                                                 ~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(127,77): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(127,77): warning :   127 |   (const unsigned char*)(signDataFromBase64.data()), signDataFromBase64.size(), m_publicKey);
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(127,77): warning :       |                                                      ~~~~~~~~~~~~~~~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(169,24): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(169,24): warning :   169 |  int length = data.size();
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(169,24): warning :       |               ~~~~~~~~~^~
   RequestCodec.cpp
   RequestFactory.cpp
   RespondCodec.cpp
@@ -37,19 +37,22 @@ D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(24,29): warning :     
 D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(92,9): warning : deleting object of abstract class type ‘Codec’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
 D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(92,9): warning :    92 |  delete c;
 D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(92,9): warning :       |         ^
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(168,9): warning : deleting object of abstract class type ‘Codec’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(168,9): warning :   168 |  delete c;
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(168,9): warning :       |         ^
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(185,13): warning : ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(159,9): warning : deleting object of abstract class type ‘Codec’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(159,9): warning :   159 |  delete c;
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(159,9): warning :       |         ^
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(175,12): warning : conversion from ‘time_t’ {aka ‘long int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(175,12): warning :   175 |  srand(time(NULL));
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(175,12): warning :       |        ~~~~^~~~~~
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(177,13): warning : ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(183,26): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(183,26): warning :   183 |    randStr.append(1, 'a' + rand() % 26);
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(183,26): warning :       |                      ~~~~^~~~~~~~~~~~~
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(187,26): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(187,26): warning :   187 |    randStr.append(1, 'A' + rand() % 26);
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(187,26): warning :       |                      ~~~~^~~~~~~~~~~~~
 D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(191,26): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(191,26): warning :   191 |    randStr.append(1, 'a' + rand() % 26);
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(191,26): warning :   191 |    randStr.append(1, '0' + rand() % 10);
 D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(191,26): warning :       |                      ~~~~^~~~~~~~~~~~~
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(195,26): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(195,26): warning :   195 |    randStr.append(1, 'A' + rand() % 26);
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(195,26): warning :       |                      ~~~~^~~~~~~~~~~~~
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(199,26): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(199,26): warning :   199 |    randStr.append(1, '0' + rand() % 10);
-D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(199,26): warning :       |                      ~~~~^~~~~~~~~~~~~
   TCPServer.cpp
   TCPSocket.cpp
 D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(47,48): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]

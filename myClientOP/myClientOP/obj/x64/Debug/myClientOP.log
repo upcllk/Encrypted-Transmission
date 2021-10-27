@@ -9,33 +9,33 @@
 D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(26,46): warning : conversion from ‘Json::Value::Int’ {aka ‘int’} to ‘short unsigned int’ may change value [-Wconversion]
 D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(26,46): warning :    26 |  m_info.serverPort = root["ServerPort"].asInt();
 D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(26,46): warning :       |                      ~~~~~~~~~~~~~~~~~~~~~~~~^~
-D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(63,9): warning : deleting object of abstract class type ‘Codec’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
-D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(63,9): warning :    63 |  delete c;
-D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(63,9): warning :       |         ^
-D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(92,9): warning : deleting object of abstract class type ‘Codec’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
-D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(92,9): warning :    92 |  delete c;
-D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(92,9): warning :       |         ^
+D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(67,9): warning : deleting object of abstract class type ‘Codec’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
+D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(67,9): warning :    67 |  delete c;
+D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(67,9): warning :       |         ^
+D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(96,9): warning : deleting object of abstract class type ‘Codec’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
+D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(96,9): warning :    96 |  delete c;
+D:\filesForCpp\Project\myClientOP\myClientOP\ClientOP.cpp(96,9): warning :       |         ^
   Codec.cpp
   CodecFactoryBase.cpp
   main.cpp
   msg.pb.cc
   myHash.cpp
   myRSA.cpp
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(54,40): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(54,40): warning :    54 |  int ret = RSA_public_encrypt(data.size(), (const unsigned char*)data.data(),
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(54,40): warning :       |                               ~~~~~~~~~^~
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(75,43): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(75,43): warning :    75 |  int ret = RSA_public_decrypt(encData.size(), (const unsigned char*)encData.data(),
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(75,43): warning :       |                               ~~~~~~~~~~~~^~
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(102,14): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(102,14): warning :   102 |     data.size(), (unsigned char*)signBuf, &outLen, m_privateKey);
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(102,14): warning :       |     ~~~~~~~~~^~
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(116,74): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(116,74): warning :   116 |  int ret = RSA_verify(level, (const unsigned char*)data.data(), data.size(),
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(116,74): warning :       |                                                                 ~~~~~~~~~^~
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(117,55): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(117,55): warning :   117 |   (const unsigned char*)signData.data(), signData.size(), m_publicKey);
-D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(117,55): warning :       |                                          ~~~~~~~~~~~~~^~
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(55,40): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(55,40): warning :    55 |  int ret = RSA_public_encrypt(data.size(), (const unsigned char*)data.data(),
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(55,40): warning :       |                               ~~~~~~~~~^~
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(103,12): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(103,12): warning :   103 |   data.size(), (unsigned char*)signBuf, &outLen, m_privateKey);
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(103,12): warning :       |   ~~~~~~~~~^~
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(126,74): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(126,74): warning :   126 |  int ret = RSA_verify(level, (const unsigned char*)data.data(), data.size(),
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(126,74): warning :       |                                                                 ~~~~~~~~~^~
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(127,77): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(127,77): warning :   127 |   (const unsigned char*)(signDataFromBase64.data()), signDataFromBase64.size(), m_publicKey);
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(127,77): warning :       |                                                      ~~~~~~~~~~~~~~~~~~~~~~~^~
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(169,24): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(169,24): warning :   169 |  int length = data.size();
+D:\filesForCpp\Project\myClientOP\myClientOP\myRSA.cpp(169,24): warning :       |               ~~~~~~~~~^~
   RequestCodec.cpp
   RequestFactory.cpp
   RespondCodec.cpp

@@ -108,20 +108,21 @@ string ServerOP::secKeyAgree(RequestMsg* reqMsg) {
 	ofs << reqMsg->data();
 	ofs.close();	// must 
 
-	RespondInfo info;
 	myRSA rsa("public.pem", false);
-	myHash sha1(T_SHA1);
 
 	cout << "从客户端收到的公钥： " << reqMsg->data() << endl;
 
+	myHash sha1(T_SHA1);
 	sha1.addData(reqMsg->data());
-	string hashData = sha1.getResult();
-	cout << "hashData : " << hashData << endl << endl;
-
-	bool bl = rsa.rsaVerify(hashData, reqMsg->sign());
+	string hashStr = sha1.getResult();
+	cout << "hash 长度 : " << hashStr.size() << endl;
+	cout << "sign 长度 : " << reqMsg->sign().size() << endl;
+	bool bl = rsa.rsaVerify(hashStr, reqMsg->sign());
+	// bool bl = rsa.rsaVerify(hashData, reqMsg->sign());
 	// 段错误 --> rsa 加解密操作数据不能长于密钥长度(公钥太长了 因为有 base64 编码)
 	// 可通过哈希运算缩小长度
 	// bool bl = rsa.rsaVerify(reqMsg->data(), reqMsg->sign());
+	RespondInfo info;
 	if (bl == false) {
 		cout << "签名校验失败" << endl;
 		info.status = false;
@@ -149,16 +150,6 @@ string ServerOP::secKeyAgree(RequestMsg* reqMsg) {
 
 		// 4. 序列化并发送
 	}
-	/*cout << "------------------------------------" << endl;
-	cout << info.data << endl;
-	cout << "------------------------------------" << endl;
-	cout << info.seckeyID << endl;
-	cout << "------------------------------------" << endl;
-	cout << info.serverID << endl;
-	cout << "------------------------------------" << endl;
-	cout << info.clientID << endl;
-	cout << "------------------------------------" << endl;
-	cout << info.status << endl;*/
 
 	CodecFactoryBase* factory = new RespondFactory(&info);
 	Codec* c = factory->createCodec();
@@ -181,6 +172,7 @@ void ServerOP::secKeyCancel() {
 string ServerOP::getRandKey(AESKeyLen len)
 {
 	int flag = 0;
+	srand(time(NULL));
 	string randStr = string();
 	char* cs = "~!@#$%^&*()_+{}:";
 	for (int i = 0; i < len; ++i) {

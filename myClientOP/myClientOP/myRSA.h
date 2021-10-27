@@ -36,6 +36,8 @@ public:
 private:
 	bool initPublicKey(string publicFile);
 	bool initPrivateKey(string privateFile);
+	string toBase64(const char* data, int len);
+	string fromBase64(const string data);
 
 private:
 	RSA* m_publicKey;

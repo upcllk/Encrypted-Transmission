@@ -22,7 +22,7 @@ public:
 	myRSA();
 	myRSA(string fileName, bool isPrivate = false);
 	~myRSA();
-	void generateRSAKey(int bits, 
+	void generateRSAKey(int bits,
 		string pubFileName = "public.pem", string priFileName = "private.pem");
 	// ¹«Ô¿¼ÓÃÜ
 	string rsaPubKeyEncrypt(string data);
@@ -36,6 +36,8 @@ public:
 private:
 	bool initPublicKey(string publicFile);
 	bool initPrivateKey(string privateFile);
+	string toBase64(const char* data, int len);
+	string fromBase64(const string data);
 
 private:
 	RSA* m_publicKey;
