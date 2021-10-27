@@ -1,0 +1,65 @@
+﻿  正在清理远程项目目录
+  正在验证源
+  正在将源远程复制到“192.168.153.131”
+  正在验证体系结构
+  正在验证体系结构
+  正在启动远程生成
+  正在编译源:
+  Codec.cpp
+  CodecFactoryBase.cpp
+  main.cpp
+  msg.pb.cc
+  myHash.cpp
+  myRSA.cpp
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(54,40): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(54,40): warning :    54 |  int ret = RSA_public_encrypt(data.size(), (const unsigned char*)data.data(),
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(54,40): warning :       |                               ~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(72,43): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(72,43): warning :    72 |  int ret = RSA_public_decrypt(encData.size(), (const unsigned char*)encData.data(),
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(72,43): warning :       |                               ~~~~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(95,14): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(95,14): warning :    95 |     data.size(), (unsigned char*)signBuf, &outLen, m_privateKey);
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(95,14): warning :       |     ~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(109,74): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(109,74): warning :   109 |  int ret = RSA_verify(level, (const unsigned char*)data.data(), data.size(),
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(109,74): warning :       |                                                                 ~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(110,55): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(110,55): warning :   110 |   (const unsigned char*)signData.data(), signData.size(), m_publicKey);
+D:\filesForCpp\Project\myServerOP\myServerOP\myRSA.cpp(110,55): warning :       |                                          ~~~~~~~~~~~~~^~
+  RequestCodec.cpp
+  RequestFactory.cpp
+  RespondCodec.cpp
+  RespondFactory.cpp
+  ServerOP.cpp
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(24,29): warning : conversion from ‘Json::Value::Int’ {aka ‘int’} to ‘short unsigned int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(24,29): warning :    24 |  m_port = root["Port"].asInt();
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(24,29): warning :       |           ~~~~~~~~~~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(92,9): warning : deleting object of abstract class type ‘Codec’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(92,9): warning :    92 |  delete c;
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(92,9): warning :       |         ^
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(168,9): warning : deleting object of abstract class type ‘Codec’ which has non-virtual destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(168,9): warning :   168 |  delete c;
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(168,9): warning :       |         ^
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(185,13): warning : ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(191,26): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(191,26): warning :   191 |    randStr.append(1, 'a' + rand() % 26);
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(191,26): warning :       |                      ~~~~^~~~~~~~~~~~~
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(195,26): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(195,26): warning :   195 |    randStr.append(1, 'A' + rand() % 26);
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(195,26): warning :       |                      ~~~~^~~~~~~~~~~~~
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(199,26): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(199,26): warning :   199 |    randStr.append(1, '0' + rand() % 10);
+D:\filesForCpp\Project\myServerOP\myServerOP\ServerOP.cpp(199,26): warning :       |                      ~~~~^~~~~~~~~~~~~
+  TCPServer.cpp
+  TCPSocket.cpp
+D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(47,48): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(47,48): warning :    47 |   int writenLen = 0, dataLen = sendData.size() + 4;
+D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(47,48): warning :       |                                ~~~~~~~~~~~~~~~~^~~
+D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(58,35): warning : conversion from ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} to ‘uint32_t’ {aka ‘unsigned int’} may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(58,35): warning :    58 |   int netLen = htonl(sendData.size()); // uint32_t
+D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(58,35): warning :       |                      ~~~~~~~~~~~~~^~
+D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(189,17): warning : conversion from ‘size_t’ {aka ‘long unsigned int’} to ‘int’ may change value [-Wconversion]
+D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(189,17): warning :   189 |    return count - nleft;
+D:\filesForCpp\Project\myServerOP\myServerOP\TCPSocket.cpp(189,17): warning :       |           ~~~~~~^~~~~~~
+  正在链接对象
+  myServerOP.vcxproj -> D:\filesForCpp\Project\myServerOP\myServerOP\bin\x64\Debug\myServerOP.out
