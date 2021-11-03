@@ -20,10 +20,14 @@ ClientOP::ClientOP(string jsonFile) {
 	Reader r;
 	Value root;
 	r.parse(ifs, root);
+	cout << "开始读" << endl;
+	cout << root["ServerID"].asString().size() << endl;
 	m_info.serverID = root["ServerID"].asString();
 	m_info.clientID = root["ClientID"].asString();
 	m_info.serverIP = root["ServerIP"].asString();
 	m_info.serverPort = root["ServerPort"].asInt();
+	cout << "json test" << endl;
+	cout << m_info.serverID << endl << m_info.clientID << endl;
 	cout << "要链接的服务器 : " << m_info.serverIP << ", " << m_info.serverPort << endl;
 }
 

@@ -1,6 +1,6 @@
 {
-  "ServerID": "linux_llk",
-  "ClientID": "win_llk",
-  "ServerIP": "127.0.0.1",
+  "ServerID": "lnx",
+  "ClientID": "win",
+  "ServerIP": "192.168.137.10",
   "ServerPort": 9898
 }
