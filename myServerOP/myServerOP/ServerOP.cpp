@@ -23,6 +23,12 @@ ServerOP::ServerOP(string json) {
 	r.parse(ifs, root);
 	m_port = root["Port"].asInt();
 	m_serverID = root["ServerID"].asString();
+	// 数据库相关信息
+	m_dbUser = root["UserDB"].asString();
+	m_dbPwd = root["PwdDB"].asString();
+	m_dbConnStr = root["ConnStr"].asString();
+	// 实例化一个连接 Orcale 数据库的对象
+	m_occi.connectDB(m_dbUser, m_dbPwd, m_dbConnStr);
 }
 
 ServerOP::~ServerOP() {
@@ -147,10 +153,29 @@ string ServerOP::secKeyAgree(RequestMsg* reqMsg) {
 
 		cout << info.data.size() << endl;
 		cout << "info.data : " << info.data << endl;
-
-		// 4. 序列化并发送
+		
+		// 将生成的密钥写入数据库
+		NodeSecKeyInfo node;
+		strcpy(node.clientID, reqMsg->clientid().data());
+		strcpy(node.serverID, reqMsg->serverid().data());
+		strcpy(node.seckey, key.data());
+		node.seckeyID = m_occi.getKeyID();	// 秘钥的ID
+		node.status = 1;
+		// 初始化node变量
+		bool bl = m_occi.writeSecKey(&node);
+		if (bl)
+		{
+			// 成功
+			m_occi.updataKeyID(node.seckeyID + 1);
+		}
+		else
+		{
+			// 失败
+			info.status = false;
+		}
+		
 	}
-
+	// 4. 序列化并发送
 	CodecFactoryBase* factory = new RespondFactory(&info);
 	Codec* c = factory->createCodec();
 	string encMsg = c->encodeMsg();

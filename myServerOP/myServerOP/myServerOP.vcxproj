@@ -80,7 +80,7 @@
     <IncludePath>D:\filesForCpp\json\use\include</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\filesForCpp\json\use\include</IncludePath>
+    <IncludePath>D:\filesForCpp\json\use\include;D:\Program Files (x86)\OpenSSL-Win64\include</IncludePath>
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="Codec.cpp" />
@@ -89,6 +89,7 @@
     <ClCompile Include="msg.pb.cc" />
     <ClCompile Include="myHash.cpp" />
     <ClCompile Include="myRSA.cpp" />
+    <ClCompile Include="OCCIOP.cpp" />
     <ClCompile Include="RequestCodec.cpp" />
     <ClCompile Include="RequestFactory.cpp" />
     <ClCompile Include="RespondCodec.cpp" />
@@ -103,10 +104,12 @@
     <ClInclude Include="msg.pb.h" />
     <ClInclude Include="myHash.h" />
     <ClInclude Include="myRSA.h" />
+    <ClInclude Include="OCCIOP.h" />
     <ClInclude Include="RequestCodec.h" />
     <ClInclude Include="RequestFactory.h" />
     <ClInclude Include="RespondCodec.h" />
     <ClInclude Include="RespondFactory.h" />
+    <ClInclude Include="SeckKeyNodeInfo.h" />
     <ClInclude Include="ServerOP.h" />
     <ClInclude Include="TCPServer.h" />
     <ClInclude Include="TCPSocket.h" />
@@ -125,7 +128,7 @@
       <CppLanguageStandard>gnu++11</CppLanguageStandard>
     </ClCompile>
     <Link>
-      <LibraryDependencies>json;protobuf;pthread;crypto</LibraryDependencies>
+      <LibraryDependencies>json;protobuf;pthread;crypto;occi;clntsh</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

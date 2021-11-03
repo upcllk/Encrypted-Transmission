@@ -4,6 +4,7 @@
 #include "TCPSocket.h"
 #include "TCPServer.h"
 #include "msg.pb.h"
+#include "OCCIOP.h"
 
 class ServerOP
 {
@@ -34,5 +35,11 @@ private:
 	map<pthread_t, TCPSocket*>m_list;
 	// 这个是监听的 socket 对象
 	TCPServer* m_server = NULL;
+
+private:
+	string m_dbUser;
+	string m_dbPwd;
+	string m_dbConnStr;
+	OCCIOP m_occi;
 };
 

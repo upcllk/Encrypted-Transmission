@@ -1,4 +1,7 @@
 {
-  "ServerID": "linux_llk",
-  "Port": 9898
+  "ServerID": "lnx",
+  "Port": 9898,
+  "UserDB": "SECMNG",
+  "PwdDB": "SECMNG",
+  "ConnStr": "192.168.137.10:1521/orcl"
 }
